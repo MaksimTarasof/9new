@@ -7,8 +7,8 @@ public class RadioTest {
     public void currentVolume() {
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(9);
-        int expected = 9;
+        radio.setCurrentVolume(8);
+        int expected = 8;
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
