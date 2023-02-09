@@ -54,17 +54,17 @@ public class Radio {
         }
     }
 
-        //переключение станций назад
+    //переключение станций назад
 
-        public void prev() {
-            if (currentNumberStation != 0) {
-                currentNumberStation--;
-            } else {
-                currentNumberStation = 9;
-            }
-
+    public void prev() {
+        if (currentNumberStation != 0) {
+            currentNumberStation--;
+        } else {
+            currentNumberStation = 9;
         }
+
     }
+}
 
 
 
