@@ -6,14 +6,14 @@ public class Radio {
         return currentVolume;
     }
 
-    public void setCurrentVolume(int newCurrentVolume) {
-        if (newCurrentVolume < 0) {
+    public void setCurrentVolume(int currentVolume) {
+        if (currentVolume < 0) {
             return;
         }
-        if (newCurrentVolume > 10) {
+        if (currentVolume > 10) {
             return;
         }
-        currentVolume = newCurrentVolume;
+        this.currentVolume = currentVolume;
     }
 
     public void increaseVolume() {
@@ -23,48 +23,45 @@ public class Radio {
     }
     // уменьшение громкости
 
-    public void reduceVolume() {
+    public void decreaseVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
         }
     }
 
     //переключение станций вперед
-    public int currentNumberStation;
+    private int currentNumberStation;
 
     public int getCurrentNumberStation() {
         return currentNumberStation;
     }
 
-    public void setCurrentNumberStation(int newCurrentNumberStation) {
-        if (newCurrentNumberStation < 0) {
+    public void setCurrentNumberStation(int CurrentNumberStation) {
+        if (CurrentNumberStation < 0) {
             return;
         }
-        if (newCurrentNumberStation > 9) {
+        if (CurrentNumberStation > 9) {
             return;
         }
-        currentNumberStation = newCurrentNumberStation;
+        this.currentNumberStation = CurrentNumberStation;
     }
 
-    public void increaseNumberStation() {
-        if (currentNumberStation < 9) {
-            currentNumberStation = currentNumberStation + 1;
-        }
-        //ниже под вопросом
-        if (currentNumberStation > 9) {
+    public void next() {
+        if (currentNumberStation != 9) {
+            currentNumberStation++;
+        } else {
             currentNumberStation = 0;
         }
-    }
 
-    //переключение станций назад
+        //переключение станций назад
 
-    public void reduceNumberStation() {
-        if (currentNumberStation > 0) {
-            currentNumberStation = currentNumberStation - 1;
-        }
-        //ниже под вопросом
-        if (currentNumberStation < 0) {
-            currentNumberStation = 9;
+        public void prev () {
+            if (currentNumberStation != 0) {
+                currentNumberStation--;
+            } else {
+                currentNumberStation = 9;
+            }
+
         }
     }
 }
