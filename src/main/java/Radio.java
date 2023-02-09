@@ -52,10 +52,11 @@ public class Radio {
         } else {
             currentNumberStation = 0;
         }
+    }
 
         //переключение станций назад
 
-        public void prev () {
+        public void prev() {
             if (currentNumberStation != 0) {
                 currentNumberStation--;
             } else {
@@ -64,7 +65,6 @@ public class Radio {
 
         }
     }
-}
 
 
 
