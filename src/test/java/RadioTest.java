@@ -13,13 +13,24 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void currentVolume1() {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolume(11);
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     public void next1() {
         Radio vol = new Radio();
 
         vol.setCurrentVolume(1);
-        int expected = 1;
+        vol.increaseVolume();
+        int expected = 2;
         int actual = vol.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
