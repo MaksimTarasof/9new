@@ -158,6 +158,17 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void next3() {
+        Radio radio = new Radio();
+
+        radio.setCurrentNumberStation(2);
+        radio.prev();
+        int expected = 1;
+        int actual = radio.getCurrentNumberStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
 
 }
