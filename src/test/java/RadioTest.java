@@ -37,6 +37,17 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void next12() {
+        Radio vol = new Radio();
+
+        vol.setCurrentVolume(10);
+        vol.increaseVolume();
+        int expected = 10;
+        int actual = vol.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     public void next9() {
@@ -68,6 +79,17 @@ public class RadioTest {
         vol.setCurrentVolume(9);
         vol.decreaseVolume();
         int expected = 8;
+        int actual = vol.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void next13() {
+        Radio vol = new Radio();
+
+        vol.setCurrentVolume(0);
+        vol.decreaseVolume();
+        int expected = 0;
         int actual = vol.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
