@@ -1,9 +1,13 @@
 public class Radio {
     private int currentVolume;
+    private int currentNumberStation;
 
-    //увеличение громкости
     public int getCurrentVolume() {
         return currentVolume;
+    }
+
+    public int getCurrentNumberStation() {
+        return currentNumberStation;
     }
 
     public void setCurrentVolume(int currentVolume) {
@@ -15,27 +19,6 @@ public class Radio {
         }
         this.currentVolume = currentVolume;
     }
-
-    public void increaseVolume() {
-        if (currentVolume < 10) {
-            currentVolume = currentVolume + 1;
-        }
-    }
-    // уменьшение громкости
-
-    public void decreaseVolume() {
-        if (currentVolume > 0) {
-            currentVolume = currentVolume - 1;
-        }
-    }
-
-    //переключение станций вперед
-    private int currentNumberStation;
-
-    public int getCurrentNumberStation() {
-        return currentNumberStation;
-    }
-
     public void setCurrentNumberStation(int CurrentNumberStation) {
         if (CurrentNumberStation < 0) {
             return;
@@ -45,6 +28,21 @@ public class Radio {
         }
         this.currentNumberStation = CurrentNumberStation;
     }
+
+    public void increaseVolume() {
+        if (currentVolume < 10) {
+            currentVolume = currentVolume + 1;
+        }
+    }
+
+    public void decreaseVolume() {
+        if (currentVolume > 0) {
+            currentVolume = currentVolume - 1;
+        }
+    }
+
+
+
 
     public void next() {
         if (currentNumberStation != 9) {
