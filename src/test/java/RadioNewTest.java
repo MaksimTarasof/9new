@@ -52,5 +52,15 @@ public class RadioNewTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void NewTest6() {
+        Radio radio = new Radio(20);
+
+        radio.setCurrentNumberStation(15);
+        int expected = 15;
+        int actual = radio.getCurrentNumberStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
 
